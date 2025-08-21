@@ -126,7 +126,9 @@ body{
 }
 
 .hero_image{
-    scale: 1.2;
+    /* scale: 1.2; */
+    object-fit:scale-down;
+    bottom: 0;
   
 }
 
@@ -189,13 +191,15 @@ body{
     font-weight:900;
     text-align: center;
     font-family: 'Exo 2', sans-serif;
+    opacity: 40%;
 
 }
 
 .box:hover{
-    width: 120vh;
-    height: 25rem;
+    
+    scale: 1.5;
     transition: 0.5s ease-in-out;
+    opacity: 100%;
 }
 
 .front{
@@ -203,6 +207,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 
 .back{
@@ -414,4 +419,175 @@ body{
 .email_link:hover{
     color: #00FFFF;
     transition: 0.3s ease-in-out;
+}
+
+/* Navbar */
+@media (max-width: 1024px){
+    .nav_bar{
+        a{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    }
+}
+
+/* Hero-section */
+@media (max-width: 1024px) {
+    .hero_section{
+        /* border: 1px solid #00FFFF; */
+        overflow: hidden;
+    }
+    
+    .hero_headline{
+        /* border: #00FFFF 1px solid; */
+        font-size: 1.3rem;
+        width: 90%;
+        /* height: 70%; */
+        margin: 1rem;
+        span{
+            display:inline;
+            font-size: 1.5rem;
+        }
+    }
+
+    .hero_subhead{
+        width: 70%;
+        height: auto;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        align-self: center;
+    }
+
+    .hero_para{
+        /* position: absolute; */
+        font-size: 0.65rem;
+        font-weight: 800;
+        top: 20%;
+        margin: 1rem;
+    }
+
+
+    .hero_text{
+        /* border: #FF00FF 1px solid; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero_image{
+        /* border: #E2E8F0 1px solid; */
+        width: 80%;
+        height: 60%;  
+        /* height: 80%; */
+        position: absolute;
+        right: -4rem;
+        /* top: 0%; */
+        bottom: 0;
+        
+    }
+
+    .skill{
+        margin-top: 3rem;
+    }
+
+}
+
+/* About ME */
+@media (max-width: 1024px){
+    .about_headline{
+        font-size: 1.5rem;
+    }
+
+    .about_me{
+        font-size: 1.2rem;
+    }
+
+    .box{
+        /* color:; */
+        width: 70%;
+    }
+
+    .box:hover{
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+    opacity: 100%;
+    }
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Skill */
+@media (max-width: 1024px){
+
+    .skill_para{
+        width: 90%;
+        display: flex;
+        font-size: 1rem;
+    }
+
+    .skills_container{
+        height: 60%;
+        width: 90%;
+    }
+
+    .skill_item{
+        margin: 0.7rem;
+        scale: 0.9;
+    }
+    
+}
+
+/* Project */
+@media (max-width: 1024px){
+    .project_container{
+        /* border: #00FFFF 1px solid; */
+        overflow: scroll;
+        flex-direction: column;
+        height: 70%;
+    }
+
+    .project_box{
+        width: 80%;
+        height: 70%;
+        margin-left: 1.5rem;
+        margin-right: 0.5rem;
+        background-color: #020810b8;
+        box-shadow: 0.5rem 0.6rem  0.7rem #ff00ffac,1rem 1rem 1rem #22D3EEac;
+
+    }
+
+    .project_box:hover{
+        scale: 1.1;
+        box-shadow: 0.5rem 0.6rem  0.7rem #ff00ffac,1rem 1rem 1rem #22D3EEac;
+    }
+    
+}
+
+/* Contact */
+@media (max-width: 1024px){
+
+    .contact_subhead{
+        width: 90%;
+        
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+
+    .con_img{
+        width: 70%;
+        top: 30%;
+        right: -4rem;
+    }
+
+    .email{
+        font-size: x-small;
+    }
+
 }
